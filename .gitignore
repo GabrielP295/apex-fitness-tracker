@@ -1,0 +1,22 @@
+# === Eclipse ===
+.project
+.classpath
+.settings/
+
+# === Java build output ===
+bin/
+out/
+target/
+
+# === IDEs (optional, in case you use others later) ===
+.idea/
+.vscode/
+*.iml
+
+# === System files ===
+.DS_Store
+Thumbs.db
+
+# === Logs / temporary ===
+*.log
+*.tmp
