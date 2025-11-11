@@ -14,4 +14,5 @@ module apexFitnessTracker {
 	requires java.desktop;
 
 	opens com.apexFitnessTracker to javafx.graphics, javafx.fxml; 
+	opens com.apexFitnessTracker.controller to javafx.graphics, javafx.fxml; 
 }

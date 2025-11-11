@@ -2,22 +2,29 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
 
-
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.apexFitnessTracker.controller.homeController">
    <top>
-      <Button mnemonicParsing="false" prefHeight="78.0" prefWidth="107.0" text="Workout Logger" BorderPane.alignment="CENTER" />
+      <HBox BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="logWorkoutBtn" mnemonicParsing="false" onAction="#onLogWorkoutBtn" prefHeight="25.0" prefWidth="138.0" text="Log Workout" HBox.hgrow="ALWAYS" />
+            <Region prefHeight="25.0" prefWidth="491.0" HBox.hgrow="NEVER" />
+            <Button fx:id="profileBtn" minHeight="0.0" minWidth="50.0" mnemonicParsing="false" onAction="#onProfileBtn" text="Profile" HBox.hgrow="ALWAYS" />
+         </children>
+      </HBox>
    </top>
    <left>
-      <Button mnemonicParsing="false" prefHeight="67.0" prefWidth="108.0" text="Exercise Library" BorderPane.alignment="CENTER" />
+      <Button fx:id="libraryBtn" mnemonicParsing="false" onAction="#onLibraryBtn" prefHeight="67.0" prefWidth="108.0" text="Exercise Library" BorderPane.alignment="CENTER" />
    </left>
    <center>
-      <Button mnemonicParsing="false" prefHeight="61.0" prefWidth="99.0" text="Analyze" BorderPane.alignment="CENTER" />
+      <Button fx:id="graphBtn" mnemonicParsing="false" onAction="#onGraphBtn" prefHeight="61.0" prefWidth="99.0" text="Graphs" BorderPane.alignment="CENTER" />
    </center>
    <right>
-      <Button mnemonicParsing="false" prefHeight="67.0" prefWidth="96.0" text="History" BorderPane.alignment="CENTER" />
+      <Button fx:id="historyBtn" mnemonicParsing="false" onAction="#onHistoryBtn" prefHeight="67.0" prefWidth="96.0" text="History" BorderPane.alignment="CENTER" />
    </right>
    <bottom>
-      <Button mnemonicParsing="false" prefHeight="46.0" prefWidth="87.0" text="Body" BorderPane.alignment="CENTER" />
+      <Button fx:id="bodyBtn" mnemonicParsing="false" onAction="#onBodyBtn" prefHeight="46.0" prefWidth="87.0" text="Body" BorderPane.alignment="CENTER" />
    </bottom>
 </BorderPane>
