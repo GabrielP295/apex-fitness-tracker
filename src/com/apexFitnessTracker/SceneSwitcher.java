@@ -9,9 +9,9 @@ import javafx.stage.Stage;
 
 public class SceneSwitcher {
 		
-		public void load(ActionEvent event, String path) {
+		public void load(ActionEvent event, String fileName) {
 			try {
-				Parent root = FXMLLoader.load(getClass().getResource(path));
+				Parent root = FXMLLoader.load(getClass().getResource("gui/" + fileName + ".fxml"));
 				Scene scene = new Scene(root);
 				
 				Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();

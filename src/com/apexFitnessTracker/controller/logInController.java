@@ -31,7 +31,7 @@ public class logInController {
 
     @FXML
     void onLogInBtn(ActionEvent event) {
-    	String path = "gui/homeUI.fxml";
+    	String path = "homeUI";
     	switchScene(event, path);
     }
 
@@ -42,7 +42,7 @@ public class logInController {
 
     @FXML
     void onSignUpLnk(ActionEvent event) {
-    	String path = "gui/signUpUI.fxml";
+    	String path = "signUpUI";
     	switchScene(event, path);
     }
 

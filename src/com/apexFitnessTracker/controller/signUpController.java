@@ -31,7 +31,7 @@ public class signUpController {
 
     @FXML
     void onLogInLnk(ActionEvent event) {
-    	String path = "gui/logInUI.fxml";
+    	String path = "logInUI";
     	switchScene(event, path);
     }
 
@@ -43,7 +43,7 @@ public class signUpController {
     @FXML
     void onSignUpBtn(ActionEvent event) {
     	System.out.println("Account successfully created."); 
-    	String path = "gui/logInUI.fxml";
+    	String path = "logInUI";
     	switchScene(event, path);
     }
 

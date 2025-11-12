@@ -30,43 +30,43 @@ public class profileController {
 
     @FXML
     void onBodyBtn(ActionEvent event) {
-    	String path = "gui/bodyUI.fxml";
+    	String path = "bodyUI";
     	switchScene(event, path);
     }
 
     @FXML
     void onGraphBtn(ActionEvent event) {
-    	String path = "gui/graphsUI.fxml";
+    	String path = "graphsUI";
     	switchScene(event, path);
     }
 
     @FXML
     void onHistoryBtn(ActionEvent event) {
-    	String path = "gui/historyUI.fxml";
+    	String path = "historyUI";
     	switchScene(event, path);
     }
 
     @FXML
     void onLibraryBtn(ActionEvent event) {
-    	String path = "gui/libraryUI.fxml";
+    	String path = "libraryUI";
     	switchScene(event, path);
     }
 
     @FXML
     void onLogWorkoutBtn(ActionEvent event) {
-    	String path = "gui/workoutLoggerUI.fxml";
+    	String path = "workoutLoggerUI";
     	switchScene(event, path);
     }
     
     @FXML
     void onHomeBtn(ActionEvent event) {
-    	String path = "gui/homeUI.fxml";
+    	String path = "homeUI";
     	switchScene(event, path);
     }
 
     @FXML
     void onLogOutBtn(ActionEvent event) {
-    	String path = "gui/logInUI.fxml";
+    	String path = "logInUI";
     	switchScene(event, path);
     }
     
