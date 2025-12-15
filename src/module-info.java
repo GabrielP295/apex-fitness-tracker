@@ -4,7 +4,7 @@
 /**
  * 
  */
-module apexFitnessTracker {
+module apexfitnesstracker {
 	requires javafx.controls;
 	requires javafx.fxml;
 	requires javafx.web;
@@ -13,6 +13,7 @@ module apexFitnessTracker {
 	requires java.sql;
 	requires java.desktop;
 
-	opens com.apexFitnessTracker to javafx.graphics, javafx.fxml; 
-	opens com.apexFitnessTracker.controller to javafx.graphics, javafx.fxml; 
+	opens com.apexfitnesstracker to javafx.graphics, javafx.fxml; 
+	opens com.apexfitnesstracker.controller to javafx.graphics, javafx.fxml, javafx.base; 
+	opens com.apexfitnesstracker.model to javafx.base;
 }

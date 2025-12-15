@@ -1,6 +1,7 @@
-package com.apexFitnessTracker.controller;
+package com.apexfitnesstracker.controller;
 
-import com.apexFitnessTracker.SceneSwitcher;
+import com.apexfitnesstracker.navigation.View;
+import com.apexfitnesstracker.util.SceneSwitcher;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -8,48 +9,24 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Hyperlink;
 import javafx.scene.control.TextField;
 
-public class signUpController {
+public class SignUpController {
 
-    @FXML
-    private TextField emailTxtFld;
+	// ----- Navigation Input Fields -----
+	@FXML private TextField emailTxtFld;
+	@FXML private TextField passwordTxtFld;
 
-    @FXML
-    private Hyperlink logInLnk;
+	// ----- Sign Up Input Fields -----
+	@FXML private Hyperlink logInLnk;
+	@FXML private Button signUpBtn;
 
-    @FXML
-    private TextField passwordTxtFld;
+	// ----- Navigation Button Event Handlers ------
+	@FXML
+	void onLogInLnk(ActionEvent event) {
+		SceneSwitcher.load(event, View.LOGIN);
+	}
 
-    @FXML
-    private Button signUpBtn;
-
-    private SceneSwitcher switcher;
-
-    @FXML
-    void onEmailTxtFld(ActionEvent event) {
-    	System.out.println("email txtfld works");
-    }
-
-    @FXML
-    void onLogInLnk(ActionEvent event) {
-    	String path = "logInUI";
-    	switchScene(event, path);
-    }
-
-    @FXML
-    void onPasswordTxtFld(ActionEvent event) {
-    	System.out.println("pass txtfld works");
-    }
-
-    @FXML
-    void onSignUpBtn(ActionEvent event) {
-    	System.out.println("Account successfully created."); 
-    	String path = "logInUI";
-    	switchScene(event, path);
-    }
-
-    void switchScene(ActionEvent event, String path) {
-    	switcher = new SceneSwitcher();
-    	switcher.load(event, path);
-    }
-
+	@FXML
+	void onSignUpBtn(ActionEvent event) {
+		SceneSwitcher.load(event, View.SIGNUP);
+	}
 }

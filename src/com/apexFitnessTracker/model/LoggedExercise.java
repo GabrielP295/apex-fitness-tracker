@@ -1,25 +1,20 @@
-package com.apexFitnessTracker.model;
+package com.apexfitnesstracker.model;
 
 import java.util.ArrayList;
 
-public class LoggedExercise extends Exercise {
+public class LoggedExercise {
 	
+	private Exercise exercise;
 	private ArrayList<Set> sets;
-
-	public LoggedExercise() {
-		super();
-		this.sets = new ArrayList<>();
-	}
 	
-	// copy constructor
-	public LoggedExercise(Exercise exercise, ArrayList<Set> sets) {
-		super(exercise.getName(), exercise.getTargetMuscle(), exercise.getInstructionsPath(), exercise.getExerciseImgPath(), exercise.getBest1RM());
-		this.sets = sets;
+	// no-arg constructor
+	public LoggedExercise() {
+		this(new Exercise(), new ArrayList<>());
 	}
 	
 	// default constructor
-	public LoggedExercise(String name, String targetMuscle, String instructionsPath, String exerciseImgPath, double best1RM, ArrayList<Set> sets) {
-		super(name, targetMuscle, instructionsPath, exerciseImgPath, best1RM);
+	public LoggedExercise(Exercise exercise, ArrayList<Set> sets) {
+		this.exercise = exercise;
 		this.sets = sets;
 	}
 	
@@ -49,7 +44,7 @@ public class LoggedExercise extends Exercise {
 	
 	// returns true if the bestSet1RM for this instance of LoggedExercise beats the current best1RM stored in Exercise
 	public boolean hasNewPR() {
-		double currentPR = this.getBest1RM();
+		double currentPR = exercise.getBest1RM();
 		double thisSessionPR = getBestSet1RM();
 		
 		if (currentPR < thisSessionPR) {
@@ -59,6 +54,46 @@ public class LoggedExercise extends Exercise {
 		return false;
 	}
 	
+	public void setNewPR() {
+		if (hasNewPR()) {
+			exercise.setBest1RM(getBestSet1RM());
+		}
+	}
+	
+	public int getNumOfSets() {
+		return sets.size();
+	}
+	
+	public int getNumOfReps() {
+		int reps = 0;
+		
+		for (Set set : sets) {
+			reps += set.getReps();
+		}
+		
+		return reps;
+	}
+	
+	public double getTotalWeight() {
+		double weight = 0;
+		
+		for (Set set : sets) {
+			weight += set.getWeight();
+		}
+		
+		return weight;
+	}
+	
+	public double getTotalVolume() {
+		double volume = 0;
+		
+		for (Set set : sets) {
+			volume += set.getSetVolume();
+		}
+		
+		return volume;
+	}
+	
 	// getter/setter methods
 	public ArrayList<Set> getSets() {
 		return sets;
@@ -66,6 +101,14 @@ public class LoggedExercise extends Exercise {
 
 	public void setSets(ArrayList<Set> sets) {
 		this.sets = sets;
+	}
+
+	public Exercise getExercise() {
+		return exercise;
+	}
+
+	public void setExercise(Exercise exercise) {
+		this.exercise = exercise;
 	}
 	
 }

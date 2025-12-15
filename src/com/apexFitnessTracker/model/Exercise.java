@@ -1,18 +1,18 @@
-package com.apexFitnessTracker.model;
+package com.apexfitnesstracker.model;
 
 public class Exercise {
 	
-	private String name;
-	private String targetMuscle;
-	private String instructionsPath;
-	private String exerciseImgPath;
-	private double best1RM;
+	private final String name;
+	private final String targetMuscle;
+	private final String instructionsPath;
+	private final String exerciseImgPath;
+	private Double best1RM;
 	
 	public Exercise() {
-		this("Unknown Exercise", "Unknown Muscle", "N/A", "N/A", -1);
+		this("Unknown Exercise", "Unknown Muscle", "N/A", "N/A", null);
 	}
 
-	public Exercise(String name, String targetMuscle, String instructionsPath, String exerciseImgPath, double best1RM) {
+	public Exercise(String name, String targetMuscle, String instructionsPath, String exerciseImgPath, Double best1RM) {
 		this.name = name;
 		this.targetMuscle = targetMuscle;
 		this.instructionsPath = instructionsPath;
@@ -20,43 +20,28 @@ public class Exercise {
 		this.best1RM = best1RM;
 	}
 
+	// getter methods, only best1RM has setter
 	public String getName() {
 		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
 	}
 
 	public String getTargetMuscle() {
 		return targetMuscle;
 	}
 
-	public void setTargetMuscle(String targetMuscle) {
-		this.targetMuscle = targetMuscle;
-	}
-
 	public String getInstructionsPath() {
 		return instructionsPath;
-	}
-
-	public void setInstructionsPath(String instructionsPath) {
-		this.instructionsPath = instructionsPath;
 	}
 
 	public String getExerciseImgPath() {
 		return exerciseImgPath;
 	}
 
-	public void setExerciseImgPath(String exerciseImgPath) {
-		this.exerciseImgPath = exerciseImgPath;
-	}
-
 	public double getBest1RM() {
 		return best1RM;
 	}
 
-	public void setBest1RM(double best1rm) {
+	public void setBest1RM(Double best1rm) {
 		best1RM = best1rm;
 	}
 	

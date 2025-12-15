@@ -1,4 +1,4 @@
-package com.apexFitnessTracker.model;
+package com.apexfitnesstracker.model;
 
 public class Set {
 	
@@ -24,6 +24,10 @@ public class Set {
 	
 	public double get1RM() {
 		return weight * (1 + (reps/30.0));
+	}
+	
+	public double getSetVolume() {
+		return weight * reps;
 	}
 	
 	@Override

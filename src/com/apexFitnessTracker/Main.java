@@ -1,20 +1,16 @@
-package com.apexFitnessTracker;
+package com.apexfitnesstracker;
+
+import com.apexfitnesstracker.navigation.View;
+import com.apexfitnesstracker.util.SceneSwitcher;
 
 import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 public class Main extends Application {
 	
 	public void start(Stage stage) throws Exception {
-		Parent root = FXMLLoader.load(getClass().getResource("gui/homeUI.fxml"));
-		Scene scene = new Scene(root);
-		
-		stage.setScene(scene);
 		stage.setTitle("Apex Fitness Tracker");
-		stage.show();
+		SceneSwitcher.load(stage, View.HOME);
 	}
 
 	public static void main(String[] args) {

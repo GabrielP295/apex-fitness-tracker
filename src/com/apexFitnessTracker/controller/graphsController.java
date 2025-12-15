@@ -1,71 +1,49 @@
-package com.apexFitnessTracker.controller;
+package com.apexfitnesstracker.controller;
 
-import com.apexFitnessTracker.SceneSwitcher;
+import com.apexfitnesstracker.navigation.View;
+import com.apexfitnesstracker.util.SceneSwitcher;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 
-public class graphsController {
+public class GraphsController {
 
-    @FXML
-    private Button bodyBtn;
+	// ----- Navigation Buttons -----
+	@FXML private Button bodyBtn;
+	@FXML private Button historyBtn;
+	@FXML private Button homeBtn;
+	@FXML private Button libraryBtn;
+	@FXML private Button logWorkoutBtn;
+	@FXML private Button profileBtn;
 
-    @FXML
-    private Button historyBtn;
+	@FXML
+	void onBodyBtn(ActionEvent event) {
+		SceneSwitcher.load(event, View.BODY);
+	}
 
-    @FXML
-    private Button homeBtn;
+	@FXML
+	void onHomeBtn(ActionEvent event) {
+		SceneSwitcher.load(event, View.HOME);
+	}
 
-    @FXML
-    private Button libraryBtn;
+	@FXML
+	void onHistoryBtn(ActionEvent event) {
+		SceneSwitcher.load(event, View.HISTORY);
+	}
 
-    @FXML
-    private Button logWorkoutBtn;
+	@FXML
+	void onLibraryBtn(ActionEvent event) {
+		SceneSwitcher.load(event, View.LIBRARY);
+	}
 
-    @FXML
-    private Button profileBtn;
+	@FXML
+	void onLogWorkoutBtn(ActionEvent event) {
+		SceneSwitcher.load(event, View.WORKOUTLOGGER);
+	}
 
-    private SceneSwitcher switcher;
-
-    @FXML
-    void onBodyBtn(ActionEvent event) {
-    	String path = "bodyUI";
-    	switchScene(event, path);
-    }
-
-    @FXML
-    void onHomeBtn(ActionEvent event) {
-    	String path = "homeUI";
-    	switchScene(event, path);
-    }
-
-    @FXML
-    void onHistoryBtn(ActionEvent event) {
-    	String path = "historyUI";
-    	switchScene(event, path);
-    }
-
-    @FXML
-    void onLibraryBtn(ActionEvent event) {
-    	String path = "libraryUI";
-    	switchScene(event, path);
-    }
-
-    @FXML
-    void onLogWorkoutBtn(ActionEvent event) {
-    	String path = "workoutLoggerUI";
-    	switchScene(event, path);
-    }
-
-    @FXML
-    void onProfileBtn(ActionEvent event) {
-    	String path = "profileUI";
-    	switchScene(event, path);
-    }
-    
-    void switchScene(ActionEvent event, String path) {
-    	switcher = new SceneSwitcher();
-    	switcher.load(event, path);
-    }
+	@FXML
+	void onProfileBtn(ActionEvent event) {
+		SceneSwitcher.load(event, View.PROFILE);
+	}
 }

@@ -15,11 +15,11 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" xmlns="http://javafx.com/javafx/17.0.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.apexFitnessTracker.controller.logInController">
+<BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.apexfitnesstracker.controller.signUpController">
    <top>
       <HBox alignment="CENTER_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" spacing="10.0" BorderPane.alignment="CENTER_LEFT">
          <children>
-            <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" text="Log In" wrapText="true" HBox.hgrow="ALWAYS">
+            <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" text="Sign Up" wrapText="true" HBox.hgrow="ALWAYS">
                <font>
                   <Font size="52.0" />
                </font>
@@ -43,7 +43,7 @@
             <RowConstraints minHeight="30.0" vgrow="NEVER" />
         </rowConstraints>
          <children>
-            <Label maxWidth="1.7976931348623157E308" text="Welcome back!">
+            <Label maxWidth="1.7976931348623157E308" text="Welcome!">
                <font>
                   <Font size="28.0" />
                </font>
@@ -64,11 +64,11 @@
    <bottom>
       <VBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" BorderPane.alignment="CENTER">
          <children>
-            <Button fx:id="logInBtn" alignment="CENTER" mnemonicParsing="false" onAction="#onLogInBtn" text="Log In" />
+            <Button fx:id="signUpBtn" alignment="CENTER" mnemonicParsing="false" onAction="#onSignUpBtn" text="Sign Up" />
             <FlowPane alignment="CENTER">
                <children>
-                  <Label text="Don't have an account?" />
-                  <Hyperlink fx:id="signUpLnk" onAction="#onSignUpLnk" text="Sign Up" />
+                  <Label text="Have an account?" />
+                  <Hyperlink fx:id="logInLnk" onAction="#onLogInLnk" text="Log In" />
                </children>
             </FlowPane>
          </children>

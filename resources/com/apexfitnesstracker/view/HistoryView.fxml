@@ -15,7 +15,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" xmlns="http://javafx.com/javafx/17.0.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.apexFitnessTracker.controller.libraryController">
+<BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.apexfitnesstracker.controller.historyController">
    <bottom>
       <FlowPane alignment="BOTTOM_CENTER" hgap="55.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" BorderPane.alignment="CENTER">
          <children>
@@ -29,12 +29,12 @@
                   <Insets />
                </FlowPane.margin>
             </Button>
-            <Button fx:id="graphBtn" mnemonicParsing="false" onAction="#onGraphBtn" text="Graph">
+            <Button fx:id="libraryBtn" mnemonicParsing="false" onAction="#onLibraryBtn" text="Library">
                <FlowPane.margin>
                   <Insets />
                </FlowPane.margin>
             </Button>
-            <Button fx:id="historyBtn" mnemonicParsing="false" onAction="#onHistoryBtn" text="History">
+            <Button fx:id="graphBtn" mnemonicParsing="false" onAction="#onGraphBtn" text="Graph">
                <FlowPane.margin>
                   <Insets />
                </FlowPane.margin>
@@ -50,7 +50,7 @@
    <top>
       <HBox alignment="CENTER_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" spacing="10.0" BorderPane.alignment="CENTER_LEFT">
          <children>
-            <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" text="Library" HBox.hgrow="ALWAYS">
+            <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" text="History" HBox.hgrow="ALWAYS">
                <font>
                   <Font size="52.0" />
                </font>
