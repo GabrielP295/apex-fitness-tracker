@@ -2,25 +2,26 @@ package com.apexfitnesstracker.model;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.List;
 
 public class Workout {
 	
 	private String name;
-	private ArrayList<LoggedExercise> exercises;
-	private LocalDateTime dateTime;
-	private double duration; //in minutes
+	private List<LoggedExercise> exercises;
+	private LocalDateTime startTime;
+	private LocalDateTime endTime;
 	
 	// no-arg constructor
 	public Workout() {
-		this("Unknown Name", new ArrayList<LoggedExercise>(), LocalDateTime.now(), 0);
+		this("Unknown Name", new ArrayList<LoggedExercise>(), LocalDateTime.now(), LocalDateTime.now());
 	}
 
 	// default constructor
-	public Workout(String name, ArrayList<LoggedExercise> exercises, LocalDateTime dateTime, double duration) {
+	public Workout(String name, List<LoggedExercise> exercises, LocalDateTime startTime, LocalDateTime endTime) {
 		this.name = name;
 		this.exercises = exercises;
-		this.dateTime = dateTime;
-		this.duration = duration;
+		this.startTime = startTime;
+		this.endTime = endTime;
 	}
 	
 	/* 
@@ -79,6 +80,11 @@ public class Workout {
 		return volume;
 	}
 	
+	//in minutes
+	public double getDuration() {
+		return 90;
+	}
+	
 	public void printSummary() {
 	    for (LoggedExercise le : exercises) {
 	        System.out.println(le.getExercise().getName() + 
@@ -91,7 +97,7 @@ public class Workout {
 	public String toString() {
 		return "Workout Name: " + getName()
 			+ "\nDuration: " + getDuration() + " mins"
-			+ "\nTime Completed: " + getDateTime()
+			+ "\nTime Completed: " + getEndTime()
 			+ "\nTotal Reps: " + getTotalReps()
 			+ "\nTotal Sets: " + getTotalSets()
 			+ "\nTotal Weight: " + getTotalWeight()
@@ -107,7 +113,7 @@ public class Workout {
 		this.name = name;
 	}
 
-	public ArrayList<LoggedExercise> getExercises() {
+	public List<LoggedExercise> getExercises() {
 		return exercises;
 	}
 
@@ -115,22 +121,19 @@ public class Workout {
 		this.exercises = exercises;
 	}
 
-	public LocalDateTime getDateTime() {
-		return dateTime;
+	public LocalDateTime getStartTime() {
+		return startTime;
 	}
 
-	public void setDateTime(LocalDateTime dateTime) {
-		this.dateTime = dateTime;
+	public void setStartTime(LocalDateTime startTime) {
+		this.startTime = startTime;
 	}
 
-	public double getDuration() {
-		return duration;
+	public LocalDateTime getEndTime() {
+		return endTime;
 	}
 
-	public void setDuration(double duration) {
-		this.duration = duration;
+	public void setEndTime(LocalDateTime endTime) {
+		this.endTime = endTime;
 	}
-	
-	
-	
 }

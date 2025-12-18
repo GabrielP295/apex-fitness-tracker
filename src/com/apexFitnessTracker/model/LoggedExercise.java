@@ -1,11 +1,12 @@
 package com.apexfitnesstracker.model;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class LoggedExercise {
 	
 	private Exercise exercise;
-	private ArrayList<Set> sets;
+	private List<WorkoutSet> workoutSets;
 	
 	// no-arg constructor
 	public LoggedExercise() {
@@ -13,9 +14,9 @@ public class LoggedExercise {
 	}
 	
 	// default constructor
-	public LoggedExercise(Exercise exercise, ArrayList<Set> sets) {
+	public LoggedExercise(Exercise exercise, List<WorkoutSet> workoutSets) {
 		this.exercise = exercise;
-		this.sets = sets;
+		this.workoutSets = workoutSets;
 	}
 	
 	/* 
@@ -23,14 +24,14 @@ public class LoggedExercise {
 	 */
 
 	// returns the set in sets ArrayList with the highest calculated 1RM using Epley formula
-	public Set getBestSet() {
+	public WorkoutSet getBestSet() {
 		double highest1RM = 0;
-		Set bestSet = null;
+		WorkoutSet bestSet = null;
 		
-		for (Set set: sets) {
-			if (set.get1RM() > highest1RM) {
-				highest1RM = set.get1RM();
-				bestSet = set;
+		for (WorkoutSet workoutSet: workoutSets) {
+			if (workoutSet.get1RM() > highest1RM) {
+				highest1RM = workoutSet.get1RM();
+				bestSet = workoutSet;
 			}
 		}
 		
@@ -61,14 +62,14 @@ public class LoggedExercise {
 	}
 	
 	public int getNumOfSets() {
-		return sets.size();
+		return workoutSets.size();
 	}
 	
 	public int getNumOfReps() {
 		int reps = 0;
 		
-		for (Set set : sets) {
-			reps += set.getReps();
+		for (WorkoutSet workoutSet : workoutSets) {
+			reps += workoutSet.getReps();
 		}
 		
 		return reps;
@@ -77,8 +78,8 @@ public class LoggedExercise {
 	public double getTotalWeight() {
 		double weight = 0;
 		
-		for (Set set : sets) {
-			weight += set.getWeight();
+		for (WorkoutSet workoutSet : workoutSets) {
+			weight += workoutSet.getWeight();
 		}
 		
 		return weight;
@@ -87,20 +88,25 @@ public class LoggedExercise {
 	public double getTotalVolume() {
 		double volume = 0;
 		
-		for (Set set : sets) {
-			volume += set.getSetVolume();
+		for (WorkoutSet workoutSet : workoutSets) {
+			volume += workoutSet.getSetVolume();
 		}
 		
 		return volume;
 	}
 	
+	@Override
+	public String toString() {
+		return this.exercise.getName();
+	}
+	
 	// getter/setter methods
-	public ArrayList<Set> getSets() {
-		return sets;
+	public List<WorkoutSet> getSets() {
+		return workoutSets;
 	}
 
-	public void setSets(ArrayList<Set> sets) {
-		this.sets = sets;
+	public void setSets(ArrayList<WorkoutSet> workoutSets) {
+		this.workoutSets = workoutSets;
 	}
 
 	public Exercise getExercise() {

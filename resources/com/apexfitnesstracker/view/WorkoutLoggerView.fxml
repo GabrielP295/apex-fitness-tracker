@@ -83,17 +83,41 @@
                   </Label>
                </children>
             </HBox>
+            <HBox alignment="CENTER">
+               <children>
+                  <Label text="Workout Name: ">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="nameFld" promptText="e.g Upper Body" HBox.hgrow="ALWAYS" />
+               </children>
+            </HBox>
             <Label text="Date and Time:">
                <font>
                   <Font size="20.0" />
                </font>
             </Label>
-            <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" spacing="20.0" VBox.vgrow="NEVER">
+            <HBox alignment="CENTER_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" spacing="10.0" VBox.vgrow="NEVER">
                <children>
                   <Label text="Date:" />
-                  <TextField fx:id="dateTxtFld" onAction="#onDate" promptText="e.g 11/17/25" />
-                  <Label text="Time:" />
-                  <TextField fx:id="timeTxtFld" onAction="#onTime" promptText="e.g 10:05am" />
+                  <TextField fx:id="dateFld" onAction="#onDate" promptText="e.g 11/17/25" />
+                  <VBox alignment="CENTER_LEFT" spacing="10.0">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" spacing="10.0">
+                           <children>
+                              <Label text="Start Time:" HBox.hgrow="ALWAYS" />
+                              <TextField fx:id="startTimeFld" onAction="#onTime" promptText="e.g 10:05am" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" spacing="10.0">
+                           <children>
+                              <Label text="End Time:" HBox.hgrow="ALWAYS" />
+                              <TextField fx:id="endTimeFld" onAction="#onTime" promptText="e.g 10:05am" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
                </children>
             </HBox>
             <Label text="Exercises:">
@@ -101,13 +125,15 @@
                   <Font size="20.0" />
                </font>
             </Label>
-            <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" spacing="20.0">
+            <HBox alignment="CENTER_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" spacing="20.0">
                <children>
                   <Label text="Exercise Name:" />
-                  <ComboBox fx:id="chooseExercise" editable="true" onAction="#onChooseExercise" promptText="None chosen" />
+                  <ComboBox fx:id="chooseExercise" editable="false" onAction="#onChooseExercise" promptText="None chosen" />
+                  <Button fx:id="addSetBtn" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="50.0" mnemonicParsing="false" onAction="#onAddSet" prefHeight="25.0" prefWidth="93.0" text="Add Set" />
+                  <Button fx:id="removeSetBtn" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="50.0" mnemonicParsing="false" onAction="#onRemoveSet" prefHeight="25.0" prefWidth="93.0" text="Remove Set" />
                </children>
             </HBox>
-            <TableView fx:id="exerciseTable" editable="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="200.0" minWidth="200.0" VBox.vgrow="ALWAYS">
+            <TableView fx:id="exerciseTable" editable="true" minHeight="0.0" minWidth="0.0" prefHeight="52.0" VBox.vgrow="NEVER">
               <columns>
                 <TableColumn fx:id="weightCol" editable="true" prefWidth="75.0" text="Weight" />
                 <TableColumn fx:id="repsCol" editable="true" prefWidth="75.0" text="Reps" />
@@ -119,19 +145,10 @@
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                </VBox.margin>
             </TableView>
-            <HBox alignment="CENTER" VBox.vgrow="NEVER">
-               <children>
-                  <Button mnemonicParsing="false" text="Add Exercise">
-                     <font>
-                        <Font size="14.0" />
-                     </font>
-                     <HBox.margin>
-                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                     </HBox.margin>
-                  </Button>
-               </children>
-            </HBox>
-            <Separator maxWidth="1.7976931348623157E308" />
+            <Separator maxWidth="1.7976931348623157E308">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding></Separator>
             <HBox alignment="CENTER" VBox.vgrow="NEVER">
                <children>
                   <Button fx:id="addWorkoutBtn" mnemonicParsing="false" onAction="#onAddWorkout" text="Add Workout">

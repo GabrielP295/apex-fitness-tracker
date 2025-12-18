@@ -82,19 +82,19 @@ public class ExerciseTester {
         System.out.println("====================================\n");
 
         // ---------- Workout 1 ----------
-        ArrayList<Set> benchSets1 = new ArrayList<>();
-        benchSets1.add(new Set("Working", 200, 8, 8));
-        benchSets1.add(new Set("Working", 210, 6, 9));
-        benchSets1.add(new Set("Top", 225, 3, 10));
+        ArrayList<WorkoutSet> benchSets1 = new ArrayList<>();
+        benchSets1.add(new WorkoutSet("Working", 200, 8, 8));
+        benchSets1.add(new WorkoutSet("Working", 210, 6, 9));
+        benchSets1.add(new WorkoutSet("Top", 225, 3, 10));
 
-        ArrayList<Set> squatSets1 = new ArrayList<>();
-        squatSets1.add(new Set("Working", 250, 8, 8));
-        squatSets1.add(new Set("Working", 260, 5, 9));
-        squatSets1.add(new Set("Top", 275, 3, 10));
+        ArrayList<WorkoutSet> squatSets1 = new ArrayList<>();
+        squatSets1.add(new WorkoutSet("Working", 250, 8, 8));
+        squatSets1.add(new WorkoutSet("Working", 260, 5, 9));
+        squatSets1.add(new WorkoutSet("Top", 275, 3, 10));
 
-        ArrayList<Set> deadliftSets1 = new ArrayList<>();
-        deadliftSets1.add(new Set("Working", 315, 5, 8));
-        deadliftSets1.add(new Set("Top", 335, 3, 9));
+        ArrayList<WorkoutSet> deadliftSets1 = new ArrayList<>();
+        deadliftSets1.add(new WorkoutSet("Working", 315, 5, 8));
+        deadliftSets1.add(new WorkoutSet("Top", 335, 3, 9));
 
         LoggedExercise loggedBench1 = new LoggedExercise(benchPress, benchSets1);
         LoggedExercise loggedSquat1 = new LoggedExercise(squat, squatSets1);
@@ -113,19 +113,19 @@ public class ExerciseTester {
         System.out.println("====================================\n");
 
         // ---------- Workout 2 ----------
-        ArrayList<Set> benchSets2 = new ArrayList<>();
-        benchSets2.add(new Set("Working", 205, 8, 8));
-        benchSets2.add(new Set("Working", 215, 6, 9));
-        benchSets2.add(new Set("Top", 235, 3, 10));
+        ArrayList<WorkoutSet> benchSets2 = new ArrayList<>();
+        benchSets2.add(new WorkoutSet("Working", 205, 8, 8));
+        benchSets2.add(new WorkoutSet("Working", 215, 6, 9));
+        benchSets2.add(new WorkoutSet("Top", 235, 3, 10));
 
-        ArrayList<Set> squatSets2 = new ArrayList<>();
-        squatSets2.add(new Set("Working", 255, 8, 8));
-        squatSets2.add(new Set("Working", 265, 5, 9));
-        squatSets2.add(new Set("Top", 285, 3, 10));
+        ArrayList<WorkoutSet> squatSets2 = new ArrayList<>();
+        squatSets2.add(new WorkoutSet("Working", 255, 8, 8));
+        squatSets2.add(new WorkoutSet("Working", 265, 5, 9));
+        squatSets2.add(new WorkoutSet("Top", 285, 3, 10));
 
-        ArrayList<Set> deadliftSets2 = new ArrayList<>();
-        deadliftSets2.add(new Set("Working", 325, 5, 8));
-        deadliftSets2.add(new Set("Top", 345, 3, 9));
+        ArrayList<WorkoutSet> deadliftSets2 = new ArrayList<>();
+        deadliftSets2.add(new WorkoutSet("Working", 325, 5, 8));
+        deadliftSets2.add(new WorkoutSet("Top", 345, 3, 9));
 
         LoggedExercise loggedBench2 = new LoggedExercise(benchPress, benchSets2);
         LoggedExercise loggedSquat2 = new LoggedExercise(squat, squatSets2);
@@ -144,19 +144,19 @@ public class ExerciseTester {
         System.out.println("====================================\n");
 
         // ---------- Workout 3 ----------
-        ArrayList<Set> benchSets3 = new ArrayList<>();
-        benchSets3.add(new Set("Working", 210, 8, 8));
-        benchSets3.add(new Set("Working", 220, 6, 9));
-        benchSets3.add(new Set("Top", 240, 3, 10));
+        ArrayList<WorkoutSet> benchSets3 = new ArrayList<>();
+        benchSets3.add(new WorkoutSet("Working", 210, 8, 8));
+        benchSets3.add(new WorkoutSet("Working", 220, 6, 9));
+        benchSets3.add(new WorkoutSet("Top", 240, 3, 10));
 
-        ArrayList<Set> squatSets3 = new ArrayList<>();
-        squatSets3.add(new Set("Working", 260, 8, 8));
-        squatSets3.add(new Set("Working", 275, 5, 9));
-        squatSets3.add(new Set("Top", 295, 3, 10));
+        ArrayList<WorkoutSet> squatSets3 = new ArrayList<>();
+        squatSets3.add(new WorkoutSet("Working", 260, 8, 8));
+        squatSets3.add(new WorkoutSet("Working", 275, 5, 9));
+        squatSets3.add(new WorkoutSet("Top", 295, 3, 10));
 
-        ArrayList<Set> deadliftSets3 = new ArrayList<>();
-        deadliftSets3.add(new Set("Working", 330, 5, 8));
-        deadliftSets3.add(new Set("Top", 355, 3, 9));
+        ArrayList<WorkoutSet> deadliftSets3 = new ArrayList<>();
+        deadliftSets3.add(new WorkoutSet("Working", 330, 5, 8));
+        deadliftSets3.add(new WorkoutSet("Top", 355, 3, 9));
 
         LoggedExercise loggedBench3 = new LoggedExercise(benchPress, benchSets3);
         LoggedExercise loggedSquat3 = new LoggedExercise(squat, squatSets3);

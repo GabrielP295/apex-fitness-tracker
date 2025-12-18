@@ -1,17 +1,17 @@
 package com.apexfitnesstracker.model;
 
-public class Set {
+public class WorkoutSet {
 	
 	private String setType;
 	private double weight;
 	private int reps; 
 	private int RPE;
 	
-	public Set() {
+	public WorkoutSet() {
 		this("Unknown set type", -1, -1, -1);
 	}
 
-	public Set(String setType, double weight, int reps, int RPE) {
+	public WorkoutSet(String setType, double weight, int reps, int RPE) {
 		this.setType = setType;
 		this.weight = weight;
 		this.reps = reps;

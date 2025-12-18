@@ -19,6 +19,11 @@ public class Exercise {
 		this.exerciseImgPath = exerciseImgPath;
 		this.best1RM = best1RM;
 	}
+	
+	@Override
+	public String toString() {
+		return this.name + " (" + targetMuscle + ")";
+	}
 
 	// getter methods, only best1RM has setter
 	public String getName() {
