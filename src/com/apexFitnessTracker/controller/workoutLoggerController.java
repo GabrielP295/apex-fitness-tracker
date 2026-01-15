@@ -1,4 +1,4 @@
-package com.apexfitnesstracker.controller;
+package com.ApexFitnessTracker.controller;
 
 import java.net.URL;
 import java.time.LocalDateTime;
@@ -7,12 +7,12 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.ResourceBundle;
 
-import com.apexfitnesstracker.model.Exercise;
-import com.apexfitnesstracker.model.LoggedExercise;
-import com.apexfitnesstracker.model.Workout;
-import com.apexfitnesstracker.model.WorkoutSet;
-import com.apexfitnesstracker.navigation.View;
-import com.apexfitnesstracker.util.SceneSwitcher;
+import com.ApexFitnessTracker.model.Exercise;
+import com.ApexFitnessTracker.model.LoggedExercise;
+import com.ApexFitnessTracker.model.Workout;
+import com.ApexFitnessTracker.model.WorkoutSet;
+import com.ApexFitnessTracker.navigation.View;
+import com.ApexFitnessTracker.util.SceneSwitcher;
 
 import javafx.beans.binding.Bindings;
 import javafx.collections.FXCollections;

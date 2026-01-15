@@ -13,7 +13,7 @@ module apexfitnesstracker {
 	requires java.sql;
 	requires java.desktop;
 
-	opens com.apexfitnesstracker to javafx.graphics, javafx.fxml; 
-	opens com.apexfitnesstracker.controller to javafx.graphics, javafx.fxml, javafx.base; 
-	opens com.apexfitnesstracker.model to javafx.base;
+	opens com.ApexFitnessTracker to javafx.graphics, javafx.fxml; 
+	opens com.ApexFitnessTracker.controller to javafx.graphics, javafx.fxml, javafx.base; 
+	opens com.ApexFitnessTracker.model to javafx.base;
 }

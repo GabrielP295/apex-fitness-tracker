@@ -1,4 +1,4 @@
-package com.apexfitnesstracker.model;
+package com.ApexFitnessTracker.model;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
@@ -105,7 +105,7 @@ public class ExerciseTester {
         loggedExercises1.add(loggedSquat1);
         loggedExercises1.add(loggedDead1);
 
-        Workout workout1 = new Workout("Workout 1", loggedExercises1, LocalDateTime.now(), 60);
+        Workout workout1 = new Workout("Workout 1", loggedExercises1, LocalDateTime.now(), LocalDateTime.now());
 
         System.out.println(workout1);
         System.out.println("Workout 1 summary:");
@@ -136,7 +136,7 @@ public class ExerciseTester {
         loggedExercises2.add(loggedSquat2);
         loggedExercises2.add(loggedDead2);
 
-        Workout workout2 = new Workout("Workout 2", loggedExercises2, LocalDateTime.now(), 80);
+        Workout workout2 = new Workout("Workout 2", loggedExercises2, LocalDateTime.now(), LocalDateTime.now());
 
         System.out.println(workout2);
         System.out.println("Workout 2 summary:");
@@ -167,7 +167,7 @@ public class ExerciseTester {
         loggedExercises3.add(loggedSquat3);
         loggedExercises3.add(loggedDead3);
 
-        Workout workout3 = new Workout("Workout 3", loggedExercises3, LocalDateTime.now(), 65);
+        Workout workout3 = new Workout("Workout 3", loggedExercises3, LocalDateTime.now(), LocalDateTime.now());
         
         System.out.println(workout3);
         System.out.println("Workout 3 summary:");

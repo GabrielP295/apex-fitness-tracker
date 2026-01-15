@@ -1,7 +1,7 @@
-package com.apexfitnesstracker.controller;
+package com.ApexFitnessTracker.controller;
 
-import com.apexfitnesstracker.navigation.View;
-import com.apexfitnesstracker.util.SceneSwitcher;
+import com.ApexFitnessTracker.navigation.View;
+import com.ApexFitnessTracker.util.SceneSwitcher;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;

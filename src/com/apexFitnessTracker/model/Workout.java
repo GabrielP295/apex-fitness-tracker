@@ -1,4 +1,4 @@
-package com.apexfitnesstracker.model;
+package com.ApexFitnessTracker.model;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;

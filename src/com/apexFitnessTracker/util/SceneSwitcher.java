@@ -1,6 +1,6 @@
-package com.apexfitnesstracker.util;
+package com.ApexFitnessTracker.util;
 
-import com.apexfitnesstracker.navigation.View;
+import com.ApexFitnessTracker.navigation.View;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;

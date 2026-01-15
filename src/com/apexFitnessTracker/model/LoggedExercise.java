@@ -1,4 +1,4 @@
-package com.apexfitnesstracker.model;
+package com.ApexFitnessTracker.model;
 
 import java.util.ArrayList;
 import java.util.List;
