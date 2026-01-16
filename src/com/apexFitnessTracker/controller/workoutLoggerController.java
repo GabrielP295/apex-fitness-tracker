@@ -108,16 +108,8 @@ public class WorkoutLoggerController implements Initializable {
 		 * bind tableview UI height to be dependent on the amount of sets that a user adds per exercise, capped at 10
 		 * 24 is the height of a row, and 28 is the height of the header
 		 */
-		//TODO change bindings to always have at minimum one row showing, and at max 10
-		exerciseTable.setFixedCellSize(24);
-		double header = 26; //header tableview height
-		exerciseTable.prefHeightProperty().bind(
-				Bindings.size(exerciseTable.getItems()).multiply(exerciseTable.getFixedCellSize()).add(header)
-			);
-		exerciseTable.minHeightProperty().bind(exerciseTable.prefHeightProperty());
-		exerciseTable.maxHeightProperty().bind(exerciseTable.prefHeightProperty());
-		System.out.println("Successfully intialized: " + exerciseTable.getHeight());
-		System.out.println("Successfully intialized: " + exerciseTable.getPrefHeight());
+		
+		//TODO change main tableview to always have at minimum one row showing, and at max 10
 		
 	}
 
