@@ -73,7 +73,7 @@
             <HBox alignment="CENTER">
                <children>
                   <Label text="Go to date: " />
-                  <DatePicker />
+                  <DatePicker fx:id="datePickerFld" />
                </children>
                <VBox.margin>
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
@@ -81,14 +81,14 @@
             </HBox>
             <ScrollPane>
                <content>
-                  <VBox maxWidth="1.7976931348623157E308" style="-fx-border-color: black;">
+                  <VBox fx:id="workoutContainer" maxWidth="1.7976931348623157E308" style="-fx-border-color: black;">
                      <children>
-                        <Label text="Workout Name">
+                        <Label fx:id="workoutNameLbl" text="Workout Name">
                            <font>
                               <Font name="System Bold" size="18.0" />
                            </font>
                         </Label>
-                        <Label text="Date and Time">
+                        <Label fx:id="dateTimeLbl" text="Date and Time">
                            <font>
                               <Font size="10.0" />
                            </font>
@@ -98,7 +98,7 @@
                               <HBox>
                                  <children>
                                     <Circle fill="WHITE" radius="7.5" stroke="BLACK" strokeType="INSIDE" />
-                                    <Label text="Length of Workout">
+                                    <Label fx:id="lengthLbl" text="Length of Workout">
                                        <font>
                                           <Font size="10.0" />
                                        </font>
@@ -108,7 +108,7 @@
                               <HBox>
                                  <children>
                                     <Circle fill="WHITE" radius="7.5" stroke="BLACK" strokeType="INSIDE" />
-                                    <Label text="Volume">
+                                    <Label fx:id="volumeLbl" text="Volume">
                                        <font>
                                           <Font size="10.0" />
                                        </font>
@@ -118,7 +118,7 @@
                               <HBox>
                                  <children>
                                     <Circle fill="WHITE" radius="7.5" stroke="BLACK" strokeType="INSIDE" />
-                                    <Label text="PRs">
+                                    <Label fx:id="prLbl" text="PRs">
                                        <font>
                                           <Font size="10.0" />
                                        </font>
@@ -129,7 +129,7 @@
                         </HBox>
                         <VBox>
                            <children>
-                              <Label text="Exercise" />
+                              <Label text="Exercises" />
                               <TitledPane fx:id="exerciseTitledPane" animated="false" expanded="false" text="Exercise 1">
                                 <content>
                                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
