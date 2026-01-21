@@ -3,9 +3,11 @@ package com.ApexFitnessTracker.model;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 public class Workout {
 	
+	private final UUID id;
 	private String name;
 	private List<LoggedExercise> exercises;
 	private LocalDateTime startTime;
@@ -18,6 +20,7 @@ public class Workout {
 
 	// default constructor
 	public Workout(String name, List<LoggedExercise> exercises, LocalDateTime startTime, LocalDateTime endTime) {
+		this.id = UUID.randomUUID();
 		this.name = name;
 		this.exercises = exercises;
 		this.startTime = startTime;
@@ -105,6 +108,10 @@ public class Workout {
 	}
 
 	// getter/setter methods
+	public UUID getId() {
+		return id;
+	}
+	
 	public String getName() {
 		return name;
 	}
